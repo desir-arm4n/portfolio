@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Coffee } from 'lucide-react';
+import { navigateToHash } from '../utils/hashNav';
 import heroImage from '../../assets/hero.png';
 
 export function Hero() {
@@ -82,12 +83,14 @@ export function Hero() {
             >
               <a
                 href="#contact"
+                onClick={(e) => { e.preventDefault(); navigateToHash('#contact'); }}
                 className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-center"
               >
                 Start a conversation
               </a>
               <a
                 href="#projects"
+                onClick={(e) => { e.preventDefault(); navigateToHash('#projects'); }}
                 className="px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-full hover:bg-purple-50 transform hover:scale-105 transition-all duration-300 text-center"
               >
                 See my work

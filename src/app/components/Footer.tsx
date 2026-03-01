@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Heart, Coffee } from 'lucide-react';
+import { navigateToHash } from '../utils/hashNav';
 
 export function Footer() {
   return (
@@ -18,27 +19,27 @@ export function Footer() {
             <h4 className="font-semibold mb-2 text-sm md:text-base">Quick Links</h4>
             <ul className="space-y-1">
               <li>
-                <a href="#hero" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                <a href="#hero" onClick={(e) => { e.preventDefault(); navigateToHash('#hero'); }} className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                <a href="#about" onClick={(e) => { e.preventDefault(); navigateToHash('#about'); }} className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#tech" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                <a href="#tech" onClick={(e) => { e.preventDefault(); navigateToHash('#tech'); }} className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   Tech Stack
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                <a href="#projects" onClick={(e) => { e.preventDefault(); navigateToHash('#projects'); }} className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                <a href="#contact" onClick={(e) => { e.preventDefault(); navigateToHash('#contact'); }} className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   Contact
                 </a>
               </li>

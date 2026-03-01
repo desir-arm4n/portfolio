@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { navigateToHash } from '../utils/hashNav';
 
 const SECTION_IDS = ['hero', 'about', 'tech', 'projects', 'testimonials', 'contact'];
 
@@ -35,6 +36,13 @@ export function Navigation() {
     { href: '#contact', label: 'Contact' },
   ];
 
+  const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      navigateToHash(href);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -49,6 +57,7 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <motion.a
             href="#hero"
+            onClick={(e) => handleHashNav(e, '#hero')}
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
@@ -63,6 +72,7 @@ export function Navigation() {
                 <motion.a
                   key={link.href}
                   href={link.href}
+                  onClick={(e) => handleHashNav(e, link.href)}
                   className={`pb-1 border-b-2 transition-colors ${
                     isActive
                       ? 'text-purple-600 border-purple-600 font-medium'
@@ -103,7 +113,10 @@ export function Navigation() {
                       ? 'text-purple-600 border-purple-600 font-medium'
                       : 'text-gray-700 border-transparent hover:text-purple-600'
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    handleHashNav(e, link.href);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   {link.label}
                 </a>
