@@ -33,7 +33,7 @@ export function TechStack() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50" id="tech">
+    <section className="py-24 bg-white" id="tech">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

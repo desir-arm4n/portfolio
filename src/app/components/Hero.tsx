@@ -5,7 +5,7 @@ import heroImage from '../../assets/hero.png';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-visible bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-visible bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

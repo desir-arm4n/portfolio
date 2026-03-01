@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50" id="testimonials">
+    <section className="py-24 bg-white" id="testimonials">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

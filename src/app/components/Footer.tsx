@@ -4,19 +4,24 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-purple-900 via-pink-900 to-blue-900 text-white py-12">
+    <footer className="bg-gradient-to-br from-purple-900 via-pink-900 to-blue-900 text-white py-5">
       <div className="container mx-auto px-6">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4">Desir</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-2">Desir</h3>
             <p className="text-sm md:text-base text-purple-200">
               Backend Developer specializing in Python, cloud solutions, and computer vision. Available for freelance work.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm md:text-base">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold mb-2 text-sm md:text-base">Quick Links</h4>
+            <ul className="space-y-1">
+              <li>
+                <a href="#hero" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
+                  Home
+                </a>
+              </li>
               <li>
                 <a href="#about" className="text-sm md:text-base text-purple-200 hover:text-white transition-colors">
                   About
@@ -41,8 +46,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm md:text-base">Connect</h4>
-            <div className="flex gap-4">
+            <h4 className="font-semibold mb-2 text-sm md:text-base">Connect</h4>
+            <div className="flex gap-3">
               <motion.a
                 href="https://github.com/desir-arm4n"
                 target="_blank"
@@ -69,8 +74,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-8 text-center">
-          <p className="text-sm md:text-base text-purple-200 flex items-center justify-center gap-2">
+        <div className="border-t border-white/20 pt-4 text-center">
+          <p className="text-sm text-purple-200 flex items-center justify-center gap-2">
             Made with <Heart size={16} className="fill-pink-400 text-pink-400" /> by Desir © 2026
           </p>
         </div>
