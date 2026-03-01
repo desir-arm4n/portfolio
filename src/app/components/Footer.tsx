@@ -44,7 +44,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm md:text-base">Connect</h4>
             <div className="flex gap-4">
               <motion.a
-                href="https://github.com/trjdsk"
+                href="https://github.com/desir-arm4n"
                 target="_blank"
                 whileHover={{ scale: 1.1, y: -5 }}
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"

@@ -5,7 +5,7 @@ import heroImage from '../../assets/hero.png';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pt-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-visible bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -31,6 +31,10 @@ export function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent pointer-events-none"
+          aria-hidden
         />
       </div>
 
@@ -97,7 +101,7 @@ export function Hero() {
               transition={{ delay: 0.7 }}
               className="flex gap-4 mt-8"
             >
-              <a href="https://github.com/trjdsk" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300">
+              <a href="https://github.com/desir-arm4n" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300">
                 <Github size={20} />
               </a>
               <a href="" className="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition-all duration-300">

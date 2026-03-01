@@ -164,6 +164,8 @@ export function Contact() {
                   <p className="text-sm text-red-600 font-medium">{errorMessage}</p>
                 )}
 
+                <p className="text-sm text-gray-500">Yes, this actually works lol</p>
+
                 <button
                   type="submit"
                   disabled={status === 'loading'}

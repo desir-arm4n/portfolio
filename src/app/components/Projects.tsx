@@ -17,7 +17,7 @@ export function Projects() {
       description: "Offline-first password manager with Python backend and browser extension. Features local encrypted storage, secure key derivation, and password generation. AES-256 encrypted vault with PBKDF2 key derivation.",
       tags: ["Python", "Tauri", "Rust", "WebExtension"],
       image: marauderImg,
-      github: "https://github.com/trjdsk/Marauder"
+      github: "https://github.com/desir-arm4n/Marauder"
     },
     {
       title: "Portfolio",
@@ -26,7 +26,7 @@ export function Projects() {
       description: "Clean, modern portfolio showcasing ML, computer vision, and full-stack work. Built with React, Vite, and Tailwind. Responsive layout with Motion animations.",
       tags: ["React", "Vite", "Tailwind", "Motion"],
       image: portfolioImg,
-      github: "https://github.com/trjdsk/Portfolio"
+      github: "https://github.com/desir-arm4n/Portfolio"
     },
     {
       title: "Touchless Lock System",
@@ -35,7 +35,7 @@ export function Projects() {
       description: "Contributed computer vision pipeline, model training, and inference for touchless door lock system. Real-time palm detection with MediaPipe and LBP features. 30 FPS inference on standard hardware.",
       tags: ["Python", "OpenCV", "MediaPipe", "SQLite"],
       image: tlsImg,
-      github: "https://github.com/trjdsk/TLS"
+      github: "https://github.com/desir-arm4n/TLS"
     },
     {
       title: "TikTalk",
@@ -54,7 +54,7 @@ export function Projects() {
       description: "Interactive JSON data visualization tool with Streamlit and Tkinter UI for easy data exploration and analysis. Dual interface for web and desktop workflows.",
       tags: ["Python", "Streamlit", "Tkinter"],
       image: jsonvizImg,
-      github: "https://github.com/trjdsk/JSON-Visualizer"
+      github: "https://github.com/desir-arm4n/JSON-Visualizer"
     },
     {
       title: "Web Scraper",
@@ -63,7 +63,7 @@ export function Projects() {
       description: "Web scraping application with Flask API endpoints and asynchronous background jobs for automated data extraction. MySQL-backed persistence with configurable concurrency.",
       tags: ["Python", "Flask", "MySQL", "Threading"],
       image: scraperImg,
-      github: "https://github.com/trjdsk/scraper"
+      github: "https://github.com/desir-arm4n/scraper"
     }
   ];
 
