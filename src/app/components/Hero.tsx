@@ -1,6 +1,7 @@
+/// <reference path="../../assets.d.ts" />
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Coffee } from 'lucide-react';
 import heroImage from '../../assets/hero.png';
 
 export function Hero() {
@@ -107,8 +108,11 @@ export function Hero() {
               <a href="" className="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition-all duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="#contact" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
+              <a href="mailto:desir.arm4n@proton.me" className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
                 <Mail size={20} />
+              </a>
+              <a href="https://buymeacoffee.com/desir.arm4n" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-600 hover:bg-amber-500 hover:text-white transition-all duration-300" title="Buy me a coffee">
+                <Coffee size={20} />
               </a>
             </motion.div>
           </motion.div>

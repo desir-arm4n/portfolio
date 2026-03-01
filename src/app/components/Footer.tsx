@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Coffee } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -64,11 +64,21 @@ export function Footer() {
                 <Linkedin size={20} />
               </motion.a>
               <motion.a
-                href="#contact"
+                href="mailto:desir.arm4n@proton.me"
                 whileHover={{ scale: 1.1, y: -5 }}
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
               >
                 <Mail size={20} />
+              </motion.a>
+              <motion.a
+                href="https://buymeacoffee.com/desir.arm4n"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                title="Buy me a coffee"
+              >
+                <Coffee size={20} />
               </motion.a>
             </div>
           </div>

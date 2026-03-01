@@ -7,6 +7,8 @@ import tlsImg from '../../assets/tls.webp';
 import tiktalkImg from '../../assets/tiktalk.png';
 import jsonvizImg from '../../assets/jsonviz.png';
 import scraperImg from '../../assets/scraper.png';
+import cutterImg from '../../assets/cutter.png';
+import orangeImg from '../../assets/orange.png';
 
 export function Projects() {
   const projects = [
@@ -64,6 +66,26 @@ export function Projects() {
       tags: ["Python", "Flask", "MySQL", "Threading"],
       image: scraperImg,
       github: "https://github.com/desir-arm4n/scraper"
+    },
+    {
+      title: "Automatic Bottle Strip Cutter",
+      type: "Academic",
+      status: "finished" as const,
+      description: "Arduino-based automation for cutting plastic bottle strips safely and consistently. Uses an infrared sensor for detection and timing, with a motorized cutting mechanism for multi-purpose strips (craft, recycling, or prototyping).",
+      tags: ["Arduino", "C++", "Infrared Sensor", "Automation"],
+      image: cutterImg,
+      github: "https://github.com/desir-arm4n",
+      private: true
+    },
+    {
+      title: "Orange Ripeness Quality Classifier",
+      type: "Academic",
+      status: "finished" as const,
+      description: "YOLOv8-based classifier trained on a custom dataset to detect ripe, unripe or rotten oranges. Captures 360° views via conveyor belt; achieves 96% accuracy with ~3.4% variance at 60 FPS on Raspberry Pi.",
+      tags: ["Python", "Raspberry Pi", "YOLOv8", "OpenCV", "MediaPipe"],
+      image: orangeImg,
+      github: "https://github.com/desir-arm4n",
+      private: true
     }
   ];
 
@@ -86,7 +108,7 @@ export function Projects() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {projects.map((project, index) => (
+          {projects.slice(0, -2).map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -157,6 +179,79 @@ export function Projects() {
               <div className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none" />
             </motion.div>
           ))}
+          <div className="sm:col-span-2 lg:col-span-3 flex justify-center gap-6 md:gap-8 flex-wrap">
+            {projects.slice(-2).map((project, index) => (
+              <motion.div
+                key={projects.length - 2 + index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (projects.length - 2 + index) * 0.1 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col w-full sm:max-w-[calc(50%-12px)] lg:max-w-[calc(33.333%-22px)]"
+              >
+                <div className="relative h-48 overflow-hidden bg-gray-100 flex-shrink-0">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                  />
+                </div>
+                
+                <div className="p-6 flex flex-col flex-1 min-h-0">
+                  <h3 className="text-xl font-bold group-hover:text-purple-600 transition-colors mb-2">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                      {project.type}
+                    </span>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                      project.status === 'ongoing'
+                        ? 'bg-amber-100 text-amber-700'
+                        : 'bg-green-100 text-green-700'
+                    }`}>
+                      {project.status === 'ongoing' ? 'Ongoing' : 'Finished'}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4 text-sm flex-1">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4 mt-auto">
+                    {project.private ? (
+                      <span className="flex items-center gap-2 text-gray-500 text-sm">
+                        <Lock size={18} />
+                        Private
+                      </span>
+                    ) : (
+                      <a 
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
+                      >
+                        <Github size={18} />
+                        <span className="text-sm">Code</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none" />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
