@@ -62,26 +62,6 @@ export function About() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 p-1 rounded-2xl"
-        >
-          <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl">
-            <h3 className="text-xl md:text-2xl font-bold mb-4">My Journey</h3>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
-              My passion for programming was ignited through my childhood love of gaming. What started as curiosity about how games worked evolved into a deep fascination with software development.
-            </p>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
-              Since 2020, I've been on an intensive learning journey, mastering various technologies and frameworks. I specialize in backend development with Python, building everything from web applications with Flask and Django to computer vision solutions.
-            </p>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-              In 2024, I began taking on professional commissions, applying my skills to real-world problems. I'm also a certified Azure DP-900 professional, combining my backend expertise with cloud technologies to deliver scalable, modern solutions.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
